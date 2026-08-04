@@ -209,3 +209,76 @@ export const PROJECTS = [
     githubUrl: "https://github.com/yourhandle/ai-kanban-board-app",
   },
 ];
+
+export const SKILLS = [
+  {
+    category: "Frontend",
+    icon: "octicon:browser-16",
+    items: [
+      { name: "React.js" },
+      { name: "Next.js" },
+      { name: "Svelte" },
+      { name: "TypeScript" },
+      { name: "JavaScript" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "Tailwind CSS" },
+      { name: "shadcn/ui" },
+      { name: "Framer Motion" },
+    ],
+  },
+  {
+    category: "Mobile",
+    icon: "octicon:device-mobile-16",
+    items: [{ name: "React Native" }, { name: "Expo" }],
+  },
+  {
+    category: "State & Data",
+    icon: "octicon:database-16",
+    items: [
+      { name: "Redux Toolkit" },
+      { name: "TanStack Query" },
+      { name: "Zustand" },
+      { name: "Context API" },
+    ],
+  },
+  {
+    category: "APIs & Backend",
+    icon: "octicon:server-16",
+    items: [
+      { name: "REST APIs" },
+      { name: "Axios" },
+      { name: "Socket.IO" },
+      { name: "Supabase" },
+      { name: "Prisma" },
+      { name: "JWT" },
+      { name: "Clerk" },
+    ],
+  },
+  {
+    category: "AI & Development",
+    icon: "octicon:hubot-16",
+    items: [
+      { name: "OpenAI API" },
+      { name: "Vercel AI SDK" },
+      { name: "Git" },
+      { name: "GitHub" },
+      { name: "GitHub Actions" },
+      { name: "Vercel" },
+      { name: "Postman" },
+    ],
+  },
+  {
+    category: "Testing & Performance",
+    icon: "octicon:zap-16",
+    items: [
+      { name: "Vitest" },
+      { name: "Jest" },
+      { name: "Lighthouse" },
+      { name: "Sentry" },
+      { name: "Code Splitting" },
+      { name: "Lazy Loading" },
+      { name: "Performance Optimization" },
+    ],
+  },
+];

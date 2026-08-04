@@ -6,6 +6,7 @@ import { useScrollSpy } from "./hooks/useScrollSpy";
 import About from "./components/About";
 import Sidebar from "./components/Sidebar";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 export default function App() {
   const [isDark, toggleTheme] = useTheme();
@@ -23,6 +24,7 @@ export default function App() {
           <div className="min-w-0">
             <About />
             <Projects />
+            <Skills />
           </div>
         </div>
       </main>
