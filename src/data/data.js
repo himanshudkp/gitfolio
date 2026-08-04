@@ -282,3 +282,36 @@ export const SKILLS = [
     ],
   },
 ];
+
+export const EXPERIENCE = [
+  {
+    role: "Associate Software Developer",
+    org: "Heaptrace Technology",
+    period: "Mar 2023 — Mar 2025",
+    location: "Pune, India",
+    points: [
+      "Built and maintained frontend features using React, TypeScript, and Redux Toolkit",
+      "Worked across the stack alongside backend and design teams to ship product features",
+    ],
+  },
+  {
+    role: "Software Developer Trainee",
+    org: "Heaptrace Technology",
+    period: "Dec 2022 — Mar 2023",
+    location: "Pune, India",
+    points: [
+      "Developed and maintained scalable backend services using Node.js and Express.js",
+      "Collaborated with frontend developers to integrate RESTful APIs with React applications",
+    ],
+  },
+  {
+    role: "Independent Software Developer",
+    org: "Freelance",
+    period: "Jan 2022 — Dec 2022",
+    location: "Remote",
+    points: [
+      "Developed and deployed web applications for clients using React, Next.js, and Tailwind CSS",
+      "Provided technical support and maintenance for existing client applications",
+    ],
+  },
+];
