@@ -125,3 +125,87 @@ export const STACK_SUMMARY = [
   "REST APIs",
   "OpenAI API",
 ];
+
+export const PROJECTS = [
+  {
+    name: "AI-Powered Presentation SaaS",
+    description:
+      "A SaaS platform that generates presentations from user prompts using OpenAI's GPT-4 API, with a Next.js frontend and a Supabase backend.",
+    tools: [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "OpenAI API",
+      "shadcn/ui",
+      "zustand",
+    ],
+    liveUrl: "https://github.com/yourhandle/lifeos",
+    githubUrl: "https://github.com/yourhandle/lifeos",
+  },
+  {
+    name: "AI Language Learning App",
+    description:
+      "An interactive language learning app that uses AI to provide personalized lessons and real-time feedback.",
+    tools: [
+      "React Native",
+      "Expo",
+      "NativeWind",
+      "OpenAI API",
+      "Redux Toolkit",
+      "TanStack Query",
+    ],
+    liveUrl: "https://github.com/yourhandle/ai-language-learning-app",
+    githubUrl: "https://github.com/yourhandle/ai-language-learning-app",
+  },
+  {
+    name: "AI Kanban Board App",
+    description:
+      "An interactive Kanban board app that uses AI to provide personalized task management and real-time feedback.",
+    tools: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "OpenAI API",
+      "React.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Socket.IO",
+      "Vercel AI SDK",
+    ],
+    liveUrl: "https://github.com/yourhandle/ai-kanban-board-app",
+    githubUrl: "https://github.com/yourhandle/ai-kanban-board-app",
+  },
+  {
+    name: "Multimodal AI Platform",
+    description:
+      "A comprehensive platform for building and deploying multimodal AI applications with seamless integration of text, image, and audio processing.",
+    tools: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "OpenAI API",
+      "React.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Socket.IO",
+    ],
+    liveUrl: "https://github.com/yourhandle/ai-kanban-board-app",
+    githubUrl: "https://github.com/yourhandle/ai-kanban-board-app",
+  },
+  {
+    name: "AI Teaching Assistant",
+    description:
+      "An AI-powered teaching assistant that helps educators create interactive lessons and provides real-time feedback to students.",
+    tools: [
+      "python",
+      "FastAPI",
+      "OpenAI API",
+      "React.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Socket.IO",
+    ],
+    liveUrl: "https://github.com/yourhandle/ai-kanban-board-app",
+    githubUrl: "https://github.com/yourhandle/ai-kanban-board-app",
+  },
+];

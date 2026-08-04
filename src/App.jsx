@@ -5,6 +5,7 @@ import { useTheme } from "./hooks/useTheme";
 import { useScrollSpy } from "./hooks/useScrollSpy";
 import About from "./components/About";
 import Sidebar from "./components/Sidebar";
+import Projects from "./components/Projects";
 
 export default function App() {
   const [isDark, toggleTheme] = useTheme();
@@ -21,6 +22,7 @@ export default function App() {
           <Sidebar />
           <div className="min-w-0">
             <About />
+            <Projects />
           </div>
         </div>
       </main>

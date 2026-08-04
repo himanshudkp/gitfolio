@@ -11,7 +11,7 @@ export default function About() {
   return (
     <section>
       <SectionHeading id="about" icon="octicon:home-16">
-        About me
+        About
       </SectionHeading>
 
       <article className="mb-10 flex flex-col gap-4 rounded-lg border border-border-muted bg-canvas-subtle p-4 sm:p-5">
