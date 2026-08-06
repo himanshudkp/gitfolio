@@ -345,3 +345,23 @@ export const EXPERIENCE = [
     ],
   },
 ];
+
+export const EDUCATION = [
+  {
+    degree: "B.E. in Computer Science",
+    school: "Rajiv Gandhi Proudyogiki Vishwavidyalaya (R.G.P.V) ",
+  },
+  {
+    degree: "Postgraduate Diploma in Mobile Computing",
+    school: "Centre for Development of Advanced Computing (C-DAC)",
+  },
+];
+
+export const CERTIFICATIONS = [
+  {
+    name: "Frontend Developer (React)",
+    issuer: "HackerRank",
+    icon: "simple-icons:hackerrank",
+    link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
+  },
+];
