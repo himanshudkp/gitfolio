@@ -10,6 +10,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Activity from "./components/Activity";
+import Contact from "./components/Contact";
 
 export default function App() {
   const [isDark, toggleTheme] = useTheme();
@@ -31,6 +32,7 @@ export default function App() {
             <Experience />
             <Education />
             <Activity />
+            <Contact />
           </div>
         </div>
       </main>
