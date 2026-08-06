@@ -40,7 +40,6 @@ export const PROFILE = {
 };
 
 export const TOOL_ICONS = {
-  // Frontend
   TypeScript: "logos:typescript-icon",
   JavaScript: "logos:javascript",
   React: "logos:react",
@@ -55,13 +54,11 @@ export const TOOL_ICONS = {
   "shadcn/ui": "simple-icons:shadcnui",
   "Framer Motion": "logos:framer",
 
-  // State & Data
   "Redux Toolkit": "logos:redux",
   "TanStack Query": "logos:react-query-icon",
   Zustand: "simple-icons:zustand",
   "Context API": "logos:react",
 
-  // Mobile
   Expo: "simple-icons:expo",
 
   // APIs & Backend
@@ -73,7 +70,6 @@ export const TOOL_ICONS = {
   JWT: "simple-icons:jsonwebtokens",
   Clerk: "simple-icons:clerk",
 
-  // AI & Development
   "OpenAI API": "simple-icons:openai",
   "Vercel AI SDK": "simple-icons:vercel",
   Git: "logos:git-icon",
@@ -82,7 +78,6 @@ export const TOOL_ICONS = {
   Vercel: "logos:vercel-icon",
   Postman: "logos:postman",
 
-  // Testing & Performance
   Vitest: "logos:vitest",
   Jest: "logos:jest",
   Lighthouse: "logos:lighthouse",
@@ -91,7 +86,6 @@ export const TOOL_ICONS = {
   "Lazy Loading": "octicon:clock-16",
   "Performance Optimization": "octicon:zap-16",
 
-  // Existing aliases / compatibility
   NativeWind: "logos:tailwindcss-icon",
 };
 
@@ -285,33 +279,69 @@ export const SKILLS = [
 
 export const EXPERIENCE = [
   {
+    role: "Independent Full-Stack Developer",
+    org: "Self-employed",
+    period: "Mar 2025 — Present",
+    location: "Pune, India",
+    points: [
+      "Designing and building full-stack products end to end, from Postgres schema to UI",
+      "Building backend services with Fastify, Prisma, Redis, and BullMQ for background jobs and notifications",
+    ],
+    projects: [
+      {
+        name: "LifeOS",
+        description:
+          "A full-stack, mobile-first personal life management system — authentication, an encrypted document vault, and a recurrence engine for recurring bills and commitments, built out in phases.",
+        tools: [
+          "React Native",
+          "TypeScript",
+          "Fastify",
+          "PostgreSQL",
+          "Redis",
+          "BullMQ",
+        ],
+        link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
+      },
+      {
+        name: "Secure File Sharing",
+        description:
+          "A Box-inspired file sharing web app with signed uploads, built on a Fastify and PostgreSQL backend, with end-to-end encryption via the Web Crypto API on the roadmap.",
+        tools: [
+          "Next.js",
+          "Tailwind CSS",
+          "Fastify",
+          "PostgreSQL",
+          "Redis",
+          "BullMQ",
+        ],
+        link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
+      },
+    ],
+  },
+  {
     role: "Associate Software Developer",
     org: "Heaptrace Technology",
-    period: "Mar 2023 — Mar 2025",
+    period: "Dec 2022 — Mar 2025",
     location: "Pune, India",
     points: [
       "Built and maintained frontend features using React, TypeScript, and Redux Toolkit",
       "Worked across the stack alongside backend and design teams to ship product features",
     ],
-  },
-  {
-    role: "Software Developer Trainee",
-    org: "Heaptrace Technology",
-    period: "Dec 2022 — Mar 2023",
-    location: "Pune, India",
-    points: [
-      "Developed and maintained scalable backend services using Node.js and Express.js",
-      "Collaborated with frontend developers to integrate RESTful APIs with React applications",
-    ],
-  },
-  {
-    role: "Independent Software Developer",
-    org: "Freelance",
-    period: "Jan 2022 — Dec 2022",
-    location: "Remote",
-    points: [
-      "Developed and deployed web applications for clients using React, Next.js, and Tailwind CSS",
-      "Provided technical support and maintenance for existing client applications",
+    projects: [
+      {
+        name: "LifeOS",
+        description:
+          "A full-stack, mobile-first personal life management system — authentication, an encrypted document vault, and a recurrence engine for recurring bills and commitments, built out in phases.",
+        tools: [
+          "React Native",
+          "TypeScript",
+          "Fastify",
+          "PostgreSQL",
+          "Redis",
+          "BullMQ",
+        ],
+        link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
+      },
     ],
   },
 ];

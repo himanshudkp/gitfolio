@@ -1,5 +1,7 @@
-import { EXPERIENCE } from "../data/data";
+import { Icon } from "@iconify/react";
+import { EXPERIENCE, toolIcon } from "../data/data";
 import { SectionHeading } from "../ui/SectionHeading";
+import { Chip } from "../ui/Chip";
 
 export default function Experience() {
   return (
@@ -31,6 +33,64 @@ export default function Experience() {
                 <li key={pt}>{pt}</li>
               ))}
             </ul>
+
+            {job.projects?.length > 0 && (
+              <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {job.projects.map((proj) => (
+                  <div
+                    key={proj.name}
+                    className={`flex flex-col rounded-md border border-border-muted bg-canvas-subtle p-3 ${
+                      job.projects.length === 1 ? "sm:col-span-2" : ""
+                    }`}
+                  >
+                    <div className="mb-1 flex items-center justify-between gap-1.5">
+                      <div className="flex items-center gap-1.5">
+                        <Icon
+                          icon="octicon:repo-16"
+                          width={14}
+                          height={14}
+                          className="text-fg-muted"
+                        />
+                        <span className="text-sm font-semibold">
+                          {proj.name}
+                        </span>
+                      </div>
+
+                      {proj.link && (
+                        <a
+                          href={proj.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex shrink-0 items-center gap-1 rounded-md border border-border bg-canvas-subtle px-2 py-1 text-xs font-medium text-fg-muted transition hover:border-primary hover:text-accent hover:shadow-sm"
+                        >
+                          <Icon
+                            icon="octicon:link-external-16"
+                            width={12}
+                            height={12}
+                          />
+                          View
+                        </a>
+                      )}
+                    </div>
+
+                    {proj.description && (
+                      <p className="m-0 mb-2 text-sm leading-relaxed text-fg-muted">
+                        {proj.description}
+                      </p>
+                    )}
+                    {proj.tools?.length > 0 && (
+                      <div className="mt-auto flex flex-wrap gap-1.5">
+                        {proj.tools.map((tool) => (
+                          <Chip key={tool} icon={toolIcon(tool)} small>
+                            {tool}
+                          </Chip>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
           </li>
         ))}
       </ol>
