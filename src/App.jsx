@@ -11,6 +11,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Activity from "./components/Activity";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [isDark, toggleTheme] = useTheme();
@@ -36,6 +37,7 @@ export default function App() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
