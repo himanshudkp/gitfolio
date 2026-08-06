@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import Activity from "./components/Activity";
 
 export default function App() {
   const [isDark, toggleTheme] = useTheme();
@@ -29,6 +30,7 @@ export default function App() {
             <Skills />
             <Experience />
             <Education />
+            <Activity />
           </div>
         </div>
       </main>

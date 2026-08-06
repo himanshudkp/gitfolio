@@ -365,3 +365,16 @@ export const CERTIFICATIONS = [
     link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
   },
 ];
+
+export const GITHUB = {
+  username: "himanshudkp",
+  accentHex: "1f6feb",
+};
+
+export const OPEN_SOURCE_CONTRIBUTIONS = [];
+
+export const BLOG = {
+  mediumUsername: "himanshudkp",
+  linkedinPostsUrl:
+    "https://www.linkedin.com/in/himanshudkp/recent-activity/all/",
+};
