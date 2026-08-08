@@ -1,16 +1,105 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio built with React and Tailwind CSS — featuring live GitHub contribution graphs, auto-fetched Medium blog posts, animated section transitions, and a working contact form.
 
-Currently, two official plugins are available:
+![Portfolio preview](./![alt text](image.png))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**🔗 Live site:** [https://gitfolio-smoky.vercel.app/](#)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Scroll-spy navigation** — active nav link updates automatically as you scroll, with top/bottom edge handling for short first/last sections
+- **Dark / light theme toggle** with persisted preference
+- **Sticky sidebar profile** with avatar, bio, résumé download, and social links
+- **Projects grid** with live/code links and tech stack chips
+- **Skills** grouped by category
+- **Experience timeline** with nested sub-projects per role
+- **Education & certifications** section
+  <!-- - **Activity feed** -->
+    <!-- - Live GitHub contribution graph (no API key required) -->
+      <!-- - Latest Medium posts, auto-fetched via RSS -->
+      <!-- - Open source contributions list -->
+- **Contact form** with real email delivery via [Web3Forms](https://web3forms.com) — no backend required
+- Fully responsive, mobile-first layout
+- Smooth reveal/entrance animations on scroll
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Category   | Tech                                                  |
+| ---------- | ----------------------------------------------------- |
+| Framework  | React                                                 |
+| Styling    | Tailwind CSS                                          |
+| Icons      | [Iconify](https://iconify.design/) (`@iconify/react`) |
+| Build Tool | Vite                                                  |
+| Contact    | [Web3Forms](https://web3forms.com)                    |
+| Deployment | Vercel                                                |
+
+## 📁 Project Structure
+
+```
+src/
+├── components/       # Section components (About, Projects, Skills, etc.)
+├── ui/               # Reusable primitives (Button, Card, Chip, SectionHeading, ...)
+├── hooks/            # useTheme, useScrollSpy
+├── data/             # Centralized content (data.js) — edit this to update your info
+├── assets/           # Resume PDF, images
+└── App.jsx
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm / yarn / pnpm
+
+### Installation
+
+```bash
+git clone https://github.com/himanshudkp/portfolio-website.git
+cd portfolio-website
+pnpm install
+```
+
+### Development
+
+```bash
+pnpm dev
+```
+
+### Build for production
+
+```bash
+pnpm build
+```
+
+## ⚙️ Configuration
+
+Most content is driven from a single file — **`src/data/data.js`** — including:
+
+- `PROFILE` — name, title, bio, location, email, social links, résumé path
+- `PROJECTS`, `SKILLS`, `EXPERIENCE`, `EDUCATION`, `CERTIFICATIONS`
+- `NAV_LINKS` / `TABS` — section navigation
+
+### Contact form setup
+
+1. Get a free access key at [web3forms.com](https://web3forms.com) (just enter the email you want submissions sent to).
+2. Add it in `src/components/Contact.jsx`:
+   ```js
+   const WEB3FORMS_ACCESS_KEY = "your-access-key-here";
+   ```
+   > This key is safe to expose client-side — it's designed to be public and validated on Web3Forms' end.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙋 Author
+
+**Himanshu Pandey**
+
+- GitHub: [@himanshudkp](#)
+- LinkedIn: [linkedin.com/in/himanshudkp](#)
+- Email: himanshudkp@gmail.com
