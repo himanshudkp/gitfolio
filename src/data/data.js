@@ -157,10 +157,10 @@ export const PROJECTS = [
   {
     name: "Portfolio Website",
     description:
-      "Personal portfolio website showcasing projects, skills, and experience.",
+      "Responsive personal portfolio built with React and Tailwind CSS to showcase projects, technical skills, and professional experience, with a fast and modern UI optimized for performance and deployment.",
     tools: ["React.js", "Vite", "Tailwind CSS", "JavaScript", "Vercel"],
     liveUrl: "https://gitfolio-smoky.vercel.app/",
-    githubUrl: "https://github.com/himanshudkp/gitfolio",
+    githubUrl: "https://github.com/himanshudkp/portfolio-website",
   },
 ];
 
@@ -334,16 +334,10 @@ export const EDUCATION = [
   {
     degree: "Postgraduate Diploma in Mobile Computing",
     school: "Centre for Development of Advanced Computing (C-DAC)",
-    location: "Pune, India",
-    coursework:
-      "Java, Spring Boot, SQL, MERN Stack, Kotlin, Swift, Android, iOS",
   },
   {
     degree: "B.E. in Computer Science & Engineering",
     school: "Rajiv Gandhi Proudyogiki Vishwavidyalaya (R.G.P.V)",
-    period: "Jul 2013 — Jun 2017",
-    location: "Bhopal, India",
-    coursework: "DSA, OOP, DBMS, Operating Systems, Computer Networks",
   },
 ];
 
