@@ -1,9 +1,9 @@
-import { SectionHeading } from "../ui/SectionHeading";
+import { SectionHeading } from "../ui";
+import { BlogPosts } from "./BlogPosts";
 import { Contribution } from "./Contribution";
 import { OpenSource } from "./OpenSource";
-import { BlogPosts } from "./BlogPosts";
 
-export default function Activity() {
+export function Activity() {
   return (
     <section>
       <SectionHeading id="activity" icon="octicon:pulse-16">
@@ -11,7 +11,6 @@ export default function Activity() {
       </SectionHeading>
 
       <BlogPosts />
-
       <Contribution />
       <OpenSource />
     </section>

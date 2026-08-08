@@ -1,59 +1,59 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
-import { NAV_LINKS, PROFILE } from "../data/data";
-import ThemeToggle from "../ui/ThemeToggle";
+import { NAV_LINKS, PROFILE } from "../data";
+import { ThemeToggle } from "../ui";
 
-export default function Header({ isDark, toggleTheme, active }) {
+export function Header({ isDark, toggleTheme, active }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-canvas/85 backdrop-blur-md">
+      <div className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-accent/50 to-transparent" />
+
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
         <a
           href="#top"
           aria-label="Home"
           className="flex shrink-0 items-center gap-2.5 text-fg no-underline"
         >
-          <span className="grid h-8.5 w-8.5 shrink-0 place-items-center overflow-hidden rounded-lg border border-border bg-canvas-subtle">
-            <img
-              src={PROFILE.avatarUrl}
-              alt={PROFILE.name}
-              className="h-full w-full object-cover"
-            />
+          <span className="rounded-lg bg-linear-to-br from-accent via-accent/60 to-transparent p-0.5 transition-transform duration-200 hover:scale-105">
+            <span className="grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-[7px] border border-canvas bg-canvas-subtle">
+              <img
+                src={PROFILE.avatarUrl}
+                alt={PROFILE.name}
+                className="h-full w-full object-cover"
+              />
+            </span>
           </span>
 
           <span className="hidden font-semibold leading-tight sm:block">
             {PROFILE.name}
-            <span className="font-normal text-fg-muted"> / portfolio</span>
           </span>
         </a>
 
-        {PROFILE.openToWork && (
-          <span className="hidden items-center gap-1.5 rounded-full border border-border bg-canvas-subtle px-2.5 py-1 text-xs font-medium text-fg-muted sm:flex">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success/50" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-success" />
-            </span>
-            Open to work
-          </span>
-        )}
-
         <nav
           aria-label="Primary"
-          className="ml-auto hidden items-center gap-5 lg:flex"
+          className="ml-auto hidden items-center gap-1 lg:flex"
         >
           {NAV_LINKS.map((link) => (
             <a
               key={link.id}
               href={`#${link.id}`}
-              className={`text-sm font-semibold no-underline transition-colors ${
-                active === link.id ? "text-fg" : "text-fg-muted hover:text-fg"
+              className={`relative rounded-lg px-3 py-2 text-sm font-semibold no-underline transition-colors ${
+                active === link.id
+                  ? "text-accent"
+                  : "text-fg-muted hover:text-fg"
               }`}
             >
               {link.label}
+              {active === link.id && (
+                <span className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-accent" />
+              )}
             </a>
           ))}
-          <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
+          <div className="ml-2 pl-2">
+            <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
+          </div>
         </nav>
 
         <div className="ml-auto flex items-center gap-2 lg:hidden">
@@ -62,7 +62,7 @@ export default function Header({ isDark, toggleTheme, active }) {
             onClick={() => setMenuOpen((p) => !p)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
-            className="grid h-9 w-9 place-items-center rounded-md border border-border bg-canvas-subtle text-fg transition-colors hover:bg-border-muted"
+            className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-canvas-subtle text-fg transition-colors hover:border-accent hover:text-accent"
           >
             <Icon
               icon={menuOpen ? "octicon:x-16" : "octicon:three-bars-16"}
@@ -84,10 +84,13 @@ export default function Header({ isDark, toggleTheme, active }) {
               key={link.id}
               href={`#${link.id}`}
               onClick={() => setMenuOpen(false)}
-              className={`border-b border-border-muted py-3 text-sm font-semibold no-underline ${
+              className={`flex items-center gap-2 border-b border-border-muted py-3 text-sm font-semibold no-underline ${
                 active === link.id ? "text-accent" : "text-fg"
               }`}
             >
+              {active === link.id && (
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+              )}
               {link.label}
             </a>
           ))}

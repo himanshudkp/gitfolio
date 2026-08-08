@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
-import { BLOG } from "../data/data";
-import { Card } from "../ui/Card";
-import { LinkButton } from "../ui/LinkButton";
-import { EmptyState } from "../ui/EmptyState";
+import { BLOG } from "../data";
+import { Card, EmptyState, LinkButton } from "../ui";
 
 export function BlogPosts() {
   const [posts, setPosts] = useState([]);
@@ -57,7 +55,8 @@ export function BlogPosts() {
 
   return (
     <div className="mb-10">
-      <h3 className="mb-3 text-xs font-semibold uppercase tracking-wide text-fg-muted">
+      <h3 className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-fg-muted">
+        <Icon icon="octicon:note-16" width={13} height={13} />
         Latest Writing
       </h3>
 
@@ -89,7 +88,7 @@ export function BlogPosts() {
       {status === "ok" && (
         <>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
+            {posts.map((post, i) => (
               <a
                 key={post.link}
                 href={post.link}
@@ -97,30 +96,41 @@ export function BlogPosts() {
                 rel="noreferrer"
                 className="block no-underline"
               >
-                <Card className="h-full p-3">
-                  <div className="mb-2 flex items-center gap-1.5 text-[11px] font-medium text-fg-muted">
-                    <Icon icon="simple-icons:medium" width={12} height={12} />
-                    Medium
+                <Card
+                  delay={i * 60}
+                  className="group relative h-full overflow-hidden p-3 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div className="h-1 w-full bg-linear-to-r from-accent via-accent/60 to-transparent opacity-70 transition-opacity duration-200 group-hover:opacity-100" />
+
+                  <div className="p-0.5 pt-3">
+                    <div className="mb-2 flex items-center gap-1.5 text-[11px] font-medium text-fg-muted">
+                      <Icon icon="simple-icons:medium" width={12} height={12} />
+                      Medium
+                    </div>
+
+                    <h4 className="m-0 line-clamp-2 text-sm font-semibold leading-snug text-fg transition-colors group-hover:text-accent">
+                      {post.title}
+                    </h4>
+
+                    <p className="m-0 mt-2 text-[11px] text-fg-muted">
+                      {new Date(post.pubDate).toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </p>
                   </div>
-
-                  <h4 className="m-0 line-clamp-2 text-sm font-semibold leading-snug text-fg transition-colors hover:text-accent">
-                    {post.title}
-                  </h4>
-
-                  <p className="m-0 mt-2 text-[11px] text-fg-muted">
-                    {new Date(post.pubDate).toLocaleDateString(undefined, {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </p>
                 </Card>
               </a>
             ))}
           </div>
 
           <div className="mt-5 flex justify-center">
-            <LinkButton href={mediumUrl} icon="octicon:link-external-16">
+            <LinkButton
+              href={mediumUrl}
+              icon="octicon:link-external-16"
+              className="shadow-md shadow-accent/20 transition-transform hover:scale-[1.02]"
+            >
               Go to Medium & Read Blog
             </LinkButton>
           </div>

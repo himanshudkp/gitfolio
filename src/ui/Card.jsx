@@ -1,7 +1,8 @@
-export function Card({ children, className = "" }) {
+export function Card({ children, className = "", delay = 0 }) {
   return (
     <div
-      className={` rounded-lg border border-border bg-canvas transition-all duration-200 hover:-translate-y-1 hover:border-fg-muted hover:shadow-lg ${className}`}
+      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      className={`rounded-xl border border-border bg-canvas transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/30 hover:shadow-md ${className}`}
     >
       {children}
     </div>

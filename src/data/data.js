@@ -4,7 +4,7 @@ export const TABS = [
   "skills",
   "experience",
   "education",
-  "activity",
+  // "activity",
   "contact",
 ];
 
@@ -14,28 +14,29 @@ export const NAV_LINKS = [
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
-  { id: "activity", label: "Activity" },
+  // { id: "activity", label: "Activity" },
   { id: "contact", label: "Contact" },
 ];
 
 export const PROFILE = {
   name: "Himanshu Pandey",
-  title: "Software Developer | 2+ Years of Experience",
+  title: "Software Developer | 2+ YOE",
   location: "Pune, India",
+  phone: "+91 9522498034",
   email: "himanshudkp@gmail.com",
   avatarUrl:
     "https://ui-avatars.com/api/?name=Himanshu+Pandey&size=260&background=1f6feb&color=fff&bold=true",
   resumeUrl:
     "https://drive.google.com/file/d/1LhVIQpT9GyKfd9iHKzZfl7BsBkwHkh5C/view?usp=sharing",
   openToWork: true,
-  bio: "Software Developer building scalable web and cross-platform mobile applications with React, Next.js, React Native, and TypeScript.",
+  bio: "Software Developer building scalable AI-Powered web and cross-platform mobile applications.",
   longBio:
-    "I'm a Software Developer with 2+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, React Native, and TypeScript. I specialize in developing responsive and reusable UI components, integrating REST APIs, managing application state, and optimizing application performance. I've also worked on AI-powered applications using OpenAI APIs and have experience collaborating with design, backend, and QA teams in Agile environments.",
+    "I'm a Software Developer with 2+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, React Native, and TypeScript. I specialize in developing responsive UI components, integrating REST APIs, managing state with Redux Toolkit and TanStack Query, optimizing application performance, and collaborating with cross-functional teams in Agile environments.",
   social: {
     github: "https://github.com/himanshudkp",
     linkedin: "https://www.linkedin.com/in/himanshudkp/",
-    leetcode: "https://leetcode.com/himanshudkp/",
-    medium: "https://medium.com/@himanshudkp",
+    // leetcode: "https://leetcode.com/himanshudkp/",
+    // medium: "https://medium.com/@himanshudkp",
   },
 };
 
@@ -47,12 +48,15 @@ export const TOOL_ICONS = {
   "React Native": "logos:react",
   "Next.js": "logos:nextjs-icon",
   Svelte: "logos:svelte-icon",
+  SvelteKit: "logos:svelte-icon",
   HTML5: "logos:html-5",
   CSS3: "logos:css-3",
+  JSON: "octicon:file-code-16",
   "Tailwind CSS": "logos:tailwindcss-icon",
   Tailwind: "logos:tailwindcss-icon",
   "shadcn/ui": "simple-icons:shadcnui",
   "Framer Motion": "logos:framer",
+  "Chart.js": "simple-icons:chartdotjs",
 
   "Redux Toolkit": "logos:redux",
   "TanStack Query": "logos:react-query-icon",
@@ -61,10 +65,10 @@ export const TOOL_ICONS = {
 
   Expo: "simple-icons:expo",
 
-  // APIs & Backend
   "REST APIs": "octicon:plug-16",
   Axios: "simple-icons:axios",
   "Socket.IO": "logos:socket-io",
+  "Socket.io": "logos:socket-io",
   Supabase: "logos:supabase-icon",
   Prisma: "logos:prisma",
   JWT: "simple-icons:jsonwebtokens",
@@ -77,6 +81,9 @@ export const TOOL_ICONS = {
   "GitHub Actions": "logos:github-actions",
   Vercel: "logos:vercel-icon",
   Postman: "logos:postman",
+  Figma: "logos:figma",
+  Jira: "logos:jira",
+  Slack: "logos:slack-icon",
 
   Vitest: "logos:vitest",
   Jest: "logos:jest",
@@ -87,6 +94,12 @@ export const TOOL_ICONS = {
   "Performance Optimization": "octicon:zap-16",
 
   NativeWind: "logos:tailwindcss-icon",
+  Vite: "logos:vitejs",
+  LemonSqueezy: "simple-icons:lemonsqueezy",
+  Fastify: "simple-icons:fastify",
+  PostgreSQL: "logos:postgresql",
+  Redis: "logos:redis",
+  BullMQ: "simple-icons:bullmq",
 };
 
 export function toolIcon(name) {
@@ -96,8 +109,8 @@ export function toolIcon(name) {
 export const SOCIAL_ICONS = {
   github: "octicon:mark-github-16",
   linkedin: "simple-icons:linkedin",
-  medium: "simple-icons:medium",
-  leetcode: "simple-icons:leetcode",
+  // medium: "simple-icons:medium",
+  // leetcode: "simple-icons:leetcode",
 };
 
 export const VARIANTS = {
@@ -111,137 +124,89 @@ export const STACK_SUMMARY = [
   "TypeScript",
   "React.js",
   "Next.js",
-  "React Native",
+  "React Native/Expo",
   "JavaScript",
   "Redux Toolkit",
-  "TanStack Query",
+  // "TanStack Query",
   "Tailwind CSS",
-  "REST APIs",
-  "OpenAI API",
+  // "REST APIs",
+  // "OpenAI API",
 ];
 
 export const PROJECTS = [
   {
-    name: "AI-Powered Presentation SaaS",
+    name: "AI Presentation Builder SaaS",
+    featured: true,
     description:
-      "A SaaS platform that generates presentations from user prompts using OpenAI's GPT-4 API, with a Next.js frontend and a Supabase backend.",
+      "A full SaaS platform for creating presentations with Creative AI, featuring drag-and-drop editing, AI image generation, templates, themes, real-time streaming, sharing, creator payments, project management, animations, and light/dark mode.",
     tools: [
       "Next.js",
+      "TypeScript",
+      "Zustand",
       "Tailwind CSS",
+      "Vercel",
+      "OpenAI API",
       "Supabase",
-      "OpenAI API",
+      "Framer Motion",
       "shadcn/ui",
-      "zustand",
+      "Vite",
     ],
-    liveUrl: "https://github.com/yourhandle/lifeos",
-    githubUrl: "https://github.com/yourhandle/lifeos",
+    liveUrl: "",
+    githubUrl: "https://github.com/himanshudkp/present-perfect-ai",
   },
   {
-    name: "AI Language Learning App",
+    name: "Portfolio Website",
     description:
-      "An interactive language learning app that uses AI to provide personalized lessons and real-time feedback.",
-    tools: [
-      "React Native",
-      "Expo",
-      "NativeWind",
-      "OpenAI API",
-      "Redux Toolkit",
-      "TanStack Query",
-    ],
-    liveUrl: "https://github.com/yourhandle/ai-language-learning-app",
-    githubUrl: "https://github.com/yourhandle/ai-language-learning-app",
-  },
-  {
-    name: "AI Kanban Board App",
-    description:
-      "An interactive Kanban board app that uses AI to provide personalized task management and real-time feedback.",
-    tools: [
-      "Node.js",
-      "Express.js",
-      "PostgreSQL",
-      "OpenAI API",
-      "React.js",
-      "Tailwind CSS",
-      "Redux Toolkit",
-      "Socket.IO",
-      "Vercel AI SDK",
-    ],
-    liveUrl: "https://github.com/yourhandle/ai-kanban-board-app",
-    githubUrl: "https://github.com/yourhandle/ai-kanban-board-app",
-  },
-  {
-    name: "Multimodal AI Platform",
-    description:
-      "A comprehensive platform for building and deploying multimodal AI applications with seamless integration of text, image, and audio processing.",
-    tools: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "OpenAI API",
-      "React.js",
-      "Tailwind CSS",
-      "Redux Toolkit",
-      "Socket.IO",
-    ],
-    liveUrl: "https://github.com/yourhandle/ai-kanban-board-app",
-    githubUrl: "https://github.com/yourhandle/ai-kanban-board-app",
-  },
-  {
-    name: "AI Teaching Assistant",
-    description:
-      "An AI-powered teaching assistant that helps educators create interactive lessons and provides real-time feedback to students.",
-    tools: [
-      "python",
-      "FastAPI",
-      "OpenAI API",
-      "React.js",
-      "Tailwind CSS",
-      "Redux Toolkit",
-      "Socket.IO",
-    ],
-    liveUrl: "https://github.com/yourhandle/ai-kanban-board-app",
-    githubUrl: "https://github.com/yourhandle/ai-kanban-board-app",
+      "Personal portfolio website showcasing projects, skills, and experience.",
+    tools: ["React.js", "Vite", "Tailwind CSS", "JavaScript", "Vercel"],
+    liveUrl: "https://gitfolio-smoky.vercel.app/",
+    githubUrl: "https://github.com/himanshudkp/gitfolio",
   },
 ];
 
 export const SKILLS = [
+  {
+    category: "Languages",
+    icon: "octicon:code-16",
+    items: [
+      { name: "JavaScript" },
+      { name: "TypeScript" },
+      { name: "HTML5" },
+      { name: "CSS3" },
+    ],
+  },
   {
     category: "Frontend",
     icon: "octicon:browser-16",
     items: [
       { name: "React.js" },
       { name: "Next.js" },
+      { name: "React Native" },
+      { name: "Expo" },
       { name: "Svelte" },
-      { name: "TypeScript" },
-      { name: "JavaScript" },
-      { name: "HTML5" },
-      { name: "CSS3" },
       { name: "Tailwind CSS" },
       { name: "shadcn/ui" },
       { name: "Framer Motion" },
+      { name: "Chart.js" },
     ],
   },
   {
-    category: "Mobile",
-    icon: "octicon:device-mobile-16",
-    items: [{ name: "React Native" }, { name: "Expo" }],
-  },
-  {
-    category: "State & Data",
+    category: "State Management",
     icon: "octicon:database-16",
     items: [
       { name: "Redux Toolkit" },
       { name: "TanStack Query" },
-      { name: "Zustand" },
       { name: "Context API" },
+      { name: "Zustand" },
     ],
   },
   {
-    category: "APIs & Backend",
+    category: "API & Backend",
     icon: "octicon:server-16",
     items: [
       { name: "REST APIs" },
       { name: "Axios" },
+      { name: "OpenAI API" },
       { name: "Socket.IO" },
       { name: "Supabase" },
       { name: "Prisma" },
@@ -250,97 +215,116 @@ export const SKILLS = [
     ],
   },
   {
-    category: "AI & Development",
-    icon: "octicon:hubot-16",
+    category: "Tools",
+    icon: "octicon:tools-16",
     items: [
-      { name: "OpenAI API" },
-      { name: "Vercel AI SDK" },
       { name: "Git" },
       { name: "GitHub" },
       { name: "GitHub Actions" },
       { name: "Vercel" },
       { name: "Postman" },
-    ],
-  },
-  {
-    category: "Testing & Performance",
-    icon: "octicon:zap-16",
-    items: [
+      { name: "Figma" },
       { name: "Vitest" },
       { name: "Jest" },
       { name: "Lighthouse" },
+      { name: "Jira" },
+      { name: "Slack" },
       { name: "Sentry" },
+    ],
+  },
+  {
+    category: "Core Skills",
+    icon: "octicon:zap-16",
+    items: [
+      { name: "Responsive UI Development" },
+      { name: "Performance Optimization" },
+      { name: "API Integration" },
       { name: "Code Splitting" },
       { name: "Lazy Loading" },
-      { name: "Performance Optimization" },
+      { name: "Agile" },
     ],
   },
 ];
 
 export const EXPERIENCE = [
   {
-    role: "Independent Full-Stack Developer",
-    org: "Self-employed",
-    period: "Mar 2025 — Present",
+    role: "Associate Software Developer",
+    org: "HeapTrace Technology Pvt. Ltd",
+    period: "Mar 2023 — Mar 2025",
     location: "Pune, India",
     points: [
-      "Designing and building full-stack products end to end, from Postgres schema to UI",
-      "Building backend services with Fastify, Prisma, Redis, and BullMQ for background jobs and notifications",
+      "Developed client-facing web and cross-platform mobile applications with React, Next.js, React Native, and TypeScript",
+      "Built responsive, reusable UI components for enterprise dashboards and consumer-facing products",
+      "Integrated REST APIs with Axios and optimized data fetching, caching, and API performance with TanStack Query",
+      "Managed application state using Redux Toolkit",
+      "Optimized application performance using React.memo, useMemo, useCallback, lazy loading, and code splitting",
+      "Delivered new features, enhancements, and bug fixes across multiple client projects while meeting business requirements",
+      "Collaborated with design, backend, and QA teams in Agile sprints to deliver production-ready features",
     ],
     projects: [
       {
-        name: "LifeOS",
+        name: "AI-Powered Recruitment SaaS",
         description:
-          "A full-stack, mobile-first personal life management system — authentication, an encrypted document vault, and a recurrence engine for recurring bills and commitments, built out in phases.",
-        tools: [
-          "React Native",
-          "TypeScript",
-          "Fastify",
-          "PostgreSQL",
-          "Redis",
-          "BullMQ",
-        ],
-        link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
-      },
-      {
-        name: "Secure File Sharing",
-        description:
-          "A Box-inspired file sharing web app with signed uploads, built on a Fastify and PostgreSQL backend, with end-to-end encryption via the Web Crypto API on the roadmap.",
+          "End-to-end AI workflows for prompt submission, response generation, content review, and editing, with OpenAI APIs automating job description generation and cutting manual drafting effort by ~60%.",
         tools: [
           "Next.js",
+          "TypeScript",
           "Tailwind CSS",
-          "Fastify",
-          "PostgreSQL",
-          "Redis",
-          "BullMQ",
+          "TanStack Query",
+          "OpenAI API",
+          "Socket.io",
+          "Supabase",
+          "Vercel",
+          "Playwright",
+          "Contentful",
+          "Vercel",
         ],
-        link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
+        link: "https://jobbrella.com/en",
+      },
+      {
+        name: "Energy Management Platform",
+        description:
+          "Consumer-facing meter onboarding, meter management, guest access, and energy analytics features, plus an internal admin panel built with React.js, Redux Toolkit, TypeScript, and Tailwind CSS.",
+        tools: [
+          "React.js",
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Redux Toolkit",
+          "Axios",
+          "Android",
+          "iOS",
+        ],
+        link: "https://play.google.com/store/apps/details?id=no.motkraft.mobile&hl=en_IN",
       },
     ],
   },
   {
-    role: "Associate Software Developer",
-    org: "Heaptrace Technology",
-    period: "Dec 2022 — Mar 2025",
+    role: "Software Developer Trainee",
+    org: "HeapTrace Technology Pvt. Ltd",
+    period: "Dec 2022 — Mar 2023",
     location: "Pune, India",
     points: [
-      "Built and maintained frontend features using React, TypeScript, and Redux Toolkit",
-      "Worked across the stack alongside backend and design teams to ship product features",
+      "Developed features for internal React.js dashboards and consumer-facing cross-platform React Native applications",
+      "Integrated REST APIs, resolved UI and functional issues, and improved application usability",
+      "Collaborated with senior developers in Agile teams",
     ],
     projects: [
       {
-        name: "LifeOS",
+        name: "AI Clinical Assistant Chatbot",
         description:
-          "A full-stack, mobile-first personal life management system — authentication, an encrypted document vault, and a recurrence engine for recurring bills and commitments, built out in phases.",
+          "Responsive UI for an AI-powered clinical assistant with context-aware conversational experiences, secure Clerk authentication, and Supabase-managed data.",
         tools: [
-          "React Native",
+          "Svelte",
+          "SvelteKit",
           "TypeScript",
-          "Fastify",
-          "PostgreSQL",
-          "Redis",
-          "BullMQ",
+          "Tailwind CSS",
+          "Supabase",
+          "OpenAI API",
+          "Vercel AI SDK",
+          "Vercel",
         ],
-        link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
+        link: "https://www.aevai-health.com/home/",
       },
     ],
   },
@@ -348,12 +332,18 @@ export const EXPERIENCE = [
 
 export const EDUCATION = [
   {
-    degree: "B.E. in Computer Science",
-    school: "Rajiv Gandhi Proudyogiki Vishwavidyalaya (R.G.P.V) ",
-  },
-  {
     degree: "Postgraduate Diploma in Mobile Computing",
     school: "Centre for Development of Advanced Computing (C-DAC)",
+    location: "Pune, India",
+    coursework:
+      "Java, Spring Boot, SQL, MERN Stack, Kotlin, Swift, Android, iOS",
+  },
+  {
+    degree: "B.E. in Computer Science & Engineering",
+    school: "Rajiv Gandhi Proudyogiki Vishwavidyalaya (R.G.P.V)",
+    period: "Jul 2013 — Jun 2017",
+    location: "Bhopal, India",
+    coursework: "DSA, OOP, DBMS, Operating Systems, Computer Networks",
   },
 ];
 
@@ -363,6 +353,8 @@ export const CERTIFICATIONS = [
     issuer: "HackerRank",
     icon: "simple-icons:hackerrank",
     link: "https://www.hackerrank.com/certificates/iframe/d6155dab369f",
+    date: "",
+    skills: "",
   },
 ];
 
